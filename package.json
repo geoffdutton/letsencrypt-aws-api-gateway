@@ -1,0 +1,41 @@
+{
+  "name": "letsencrypt-aws-api-gateway",
+  "version": "1.0.0",
+  "description": "Automated way of creating and updating SSL certs for AWS API Gateway.",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src/entry.js",
+    "build": "babel src -d dist",
+    "test": "mocha --recursive --compilers js:babel-register src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoffdutton/letsencrypt-aws-api-gateway.git"
+  },
+  "keywords": [
+    "aws",
+    "api",
+    "gateway",
+    "letsencrypt"
+  ],
+  "author": "Geoff Dutton <g.dutton@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geoffdutton/letsencrypt-aws-api-gateway/issues"
+  },
+  "homepage": "https://github.com/geoffdutton/letsencrypt-aws-api-gateway#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "mocha": "^3.1.2",
+    "unit.js": "^2.0.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "got": "^6.6.3",
+    "le-challenge-ddns": "^2.0.3",
+    "letsencrypt": "^2.1.8"
+  }
+}
